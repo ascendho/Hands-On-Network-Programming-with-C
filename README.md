@@ -1,6 +1,10 @@
 ## 封面
 
-![image-20241124230300308](assets\image-20241124230300308.png)
+<div align="center">
+	<img src="assets\image-20241124230300308.png">
+</div>
+
+ 
 
 
 

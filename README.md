@@ -1,3 +1,9 @@
+## 封面
+
+![image-20241124230300308](D:\BOOK\Hands-On Network Programming with C\assets\image-20241124230300308.png)
+
+
+
 ## 第一章： Introducing Networks and Protocols
 
 ### Q1: IPv4 和 IPv6 之间的主要区别是什么？

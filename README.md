@@ -1,6 +1,6 @@
 ## 封面
 
-![image-20241124230300308](D:\BOOK\Hands-On Network Programming with C\assets\image-20241124230300308.png)
+![image-20241124230300308](assets\image-20241124230300308.png)
 
 
 

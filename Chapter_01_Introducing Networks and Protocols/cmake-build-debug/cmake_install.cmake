@@ -1,4 +1,4 @@
-# Install script for directory: D:/BOOK/Hands-On Network Programming with C/chap01
+# Install script for directory: D:/BOOK/Hands-On Network Programming with C/Chapter_01_Introducing Networks and Protocols
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/BOOK/Hands-On Network Programming with C/chap01/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/BOOK/Hands-On Network Programming with C/Chapter_01_Introducing Networks and Protocols/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/BOOK/Hands-On Network Programming with C/chap01/cmake-build-debug"
+			"value" : "d:/BOOK/Hands-On Network Programming with C/Chapter_01_Introducing Networks and Protocols/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/BOOK/Hands-On Network Programming with C/chap01/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/BOOK/Hands-On Network Programming with C/Chapter_01_Introducing Networks and Protocols/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/BOOK/Hands-On Network Programming with C/chap01"
+			"value" : "D:/BOOK/Hands-On Network Programming with C/Chapter_01_Introducing Networks and Protocols"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1147,7 +1147,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/BOOK/Hands-On Network Programming with C/chap01/cmake-build-debug"
+			"value" : "D:/BOOK/Hands-On Network Programming with C/Chapter_01_Introducing Networks and Protocols/cmake-build-debug"
 		},
 		{
 			"name" : "chap01_IS_TOP_LEVEL",
@@ -1171,7 +1171,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/BOOK/Hands-On Network Programming with C/chap01"
+			"value" : "D:/BOOK/Hands-On Network Programming with C/Chapter_01_Introducing Networks and Protocols"
 		}
 	],
 	"kind" : "cache",

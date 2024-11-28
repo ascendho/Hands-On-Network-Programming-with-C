@@ -7,3 +7,5 @@ add_executable(sock_init sock_init.c)
 add_executable(time_console time_console.c)
 
 add_executable(time_server time_server.c)
+add_executable(time_server_ipv6 time_server_ipv6.c)
+add_executable(time_server_dual time_server_dual.c)

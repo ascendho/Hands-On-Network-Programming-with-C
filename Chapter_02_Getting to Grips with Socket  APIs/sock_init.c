@@ -1,8 +1,7 @@
-/* 编译（MinGW on Windows）：gcc sock_init.c -o sock_init.exe -lws2_32
- * 运行（MinGW on Windows）：./sock_init.exe
- *
- * 编译（Linux或macOS）：gcc sock_init.c -o sock_init
- * 运行（Linux或macOS）：./sock_init
+/*
+ * 编译（Windows）：gcc sock_init.c -o sock_init.exe -lws2_32
+ * 编译（Linux）：  gcc sock_init.c -o sock_init
+ * 运行：          ./sock_init
  */
 
 // include在Windows平台上所需要的头文件

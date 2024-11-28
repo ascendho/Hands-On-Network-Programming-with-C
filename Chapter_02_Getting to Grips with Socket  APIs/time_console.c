@@ -1,4 +1,5 @@
-/* 编译：gcc time_console.c -o time_console
+/*
+ * 编译：gcc time_console.c -o time_console
  * 运行：./time_console
  */
 

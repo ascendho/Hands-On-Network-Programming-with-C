@@ -4,7 +4,7 @@
 	<img src="assets\image-20241124230300308.png">
 </div>
 
- 
+
 
 
 
@@ -32,7 +32,11 @@
 
 ### Q6: 你如何找到你的公网IP地址？
 
-> 最简单的方法是访问一个能为你报告IP地址的网站。例如http://api.ipify.org/、http://ifconfig.me/ip等。
+> 最简单的方法是访问一个能为你报告IP地址的网站。例如：
+>
+> 1. http://api.ipify.org/ 
+>
+> 2. http://ifconfig.me/ip等
 
 ### Q7: 操作系统是如何知道哪个应用程序负责处理传入的数据包的？
 

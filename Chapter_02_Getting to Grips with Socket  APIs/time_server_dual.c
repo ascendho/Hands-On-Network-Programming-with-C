@@ -1,10 +1,9 @@
 /*
- * 编译（Linux）：  gcc time_server.c -o time_server
- * 编译（Windows）：gcc time_server.c -o time_server.exe -lws2_32
- * 运行：          ./time_server
+ * 编译（Linux）：  gcc time_server_dual.c -o time_server_dual
+ * 编译（Windows）：gcc time_server_dual.c -o time_server_dual.exe -lws2_32
+ * 运行：          ./time_server_dual
  */
 
-// include在Windows平台上所需要的头文件
 #if defined(_WIN32)
 #ifndef _WIN32_WINNT
 #define _WIN32_WINNT 0x0600
@@ -13,7 +12,6 @@
 #include <ws2tcpip.h>
 #pragma comment(lib, "ws2_32.lib")
 
-// 否则include伯克利的socket接口
 #else
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -29,6 +27,10 @@
 #define ISVALIDSOCKET(s) ((s) != INVALID_SOCKET)
 #define CLOSESOCKET(s) closesocket(s)
 #define GETSOCKETERRNO() (WSAGetLastError())
+
+#if !defined(IPV6_V6ONLY)
+#define IPV6_V6ONLY 27
+#endif
 
 #else
 #define ISVALIDSOCKET(s) ((s) >= 0)
@@ -52,19 +54,16 @@ int main()
     }
 #endif
 
-    // 配置本地地址
     printf("Configuring local address...\n");
     struct addrinfo hints;
     memset(&hints, 0, sizeof(hints));
-
-    hints.ai_family = AF_INET;
+    hints.ai_family = AF_INET6;
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_flags = AI_PASSIVE;
 
     struct addrinfo* bind_address;
     getaddrinfo(0, "8080", &hints, &bind_address);
 
-    // 创建socket
     printf("Creating socket...\n");
     SOCKET socket_listen;
     socket_listen = socket(bind_address->ai_family,
@@ -74,9 +73,14 @@ int main()
         fprintf(stderr, "socket() failed. (%d)\n", GETSOCKETERRNO());
         return 1;
     }
-    printf("---------------------------------\n");
 
-    // 绑定socket到本地地址
+    int option = 0;
+    if (setsockopt(socket_listen, IPPROTO_IPV6, IPV6_V6ONLY, (void*)&option, sizeof(option)))
+    {
+        fprintf(stderr, "setsockopt() failed. (%d)\n", GETSOCKETERRNO());
+        return 1;
+    }
+
     printf("Binding socket to local address...\n");
     if (bind(socket_listen,
              bind_address->ai_addr, bind_address->ai_addrlen))
@@ -85,20 +89,15 @@ int main()
         return 1;
     }
 
-    // 释放内存
     freeaddrinfo(bind_address);
-    printf("---------------------------------\n");
 
-    // 监听
     printf("Listening...\n");
     if (listen(socket_listen, 10) < 0)
     {
         fprintf(stderr, "listen() failed. (%d)\n", GETSOCKETERRNO());
         return 1;
     }
-    printf("---------------------------------\n");
 
-    // 等待连接
     printf("Waiting for connection...\n");
     struct sockaddr_storage client_address;
     socklen_t client_len = sizeof(client_address);
@@ -109,26 +108,20 @@ int main()
         fprintf(stderr, "accept() failed. (%d)\n", GETSOCKETERRNO());
         return 1;
     }
-    printf("---------------------------------\n");
 
-    // 客户端已连接
     printf("Client is connected... ");
     char address_buffer[100];
     getnameinfo((struct sockaddr*)&client_address,
                 client_len, address_buffer, sizeof(address_buffer), 0, 0,
                 NI_NUMERICHOST);
     printf("%s\n", address_buffer);
-    printf("---------------------------------\n");
 
-    // 读取请求
     printf("Reading request...\n");
     char request[1024];
     int bytes_received = recv(socket_client, request, 1024, 0);
     printf("Received %d bytes.\n", bytes_received);
-    printf("%.*s", bytes_received, request);
-    printf("---------------------------------\n");
+    //printf("%.*s", bytes_received, request);
 
-    // 发送回复
     printf("Sending response...\n");
     const char* response =
         "HTTP/1.1 200 OK\r\n"
@@ -143,17 +136,12 @@ int main()
     char* time_msg = ctime(&timer);
     bytes_sent = send(socket_client, time_msg, strlen(time_msg), 0);
     printf("Sent %d of %d bytes.\n", bytes_sent, (int)strlen(time_msg));
-    printf("---------------------------------\n");
 
-    // 关闭连接
     printf("Closing connection...\n");
     CLOSESOCKET(socket_client);
-    printf("---------------------------------\n");
 
-    // 关闭监听socket
     printf("Closing listening socket...\n");
     CLOSESOCKET(socket_listen);
-    printf("---------------------------------\n");
 
 #if defined(_WIN32)
     WSACleanup();

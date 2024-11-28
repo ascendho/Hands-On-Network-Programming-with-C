@@ -1,0 +1,7 @@
+D:/BOOK/Hands-On Network Programming with C/Chapter_02_Getting to Grips with Socket  APIs/cmake-build-debug/CMakeFiles/sock_init.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_02_Getting to Grips with Socket  APIs/cmake-build-debug/CMakeFiles/time_console.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_02_Getting to Grips with Socket  APIs/cmake-build-debug/CMakeFiles/time_server.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_02_Getting to Grips with Socket  APIs/cmake-build-debug/CMakeFiles/time_server_ipv6.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_02_Getting to Grips with Socket  APIs/cmake-build-debug/CMakeFiles/time_server_dual.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_02_Getting to Grips with Socket  APIs/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_02_Getting to Grips with Socket  APIs/cmake-build-debug/CMakeFiles/rebuild_cache.dir

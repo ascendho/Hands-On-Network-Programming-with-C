@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chapter_03_An_In_Depth_Overview_of_TCP_Connections",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-cacce0d0f09d22fffb68.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_serve_chat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_serve_chat-Debug-7432d49b7269436c223e.json",
+					"name" : "tcp_serve_chat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_serve_toupper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_serve_toupper-Debug-a067c04d1fceced9ff3a.json",
+					"name" : "tcp_serve_toupper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_serve_toupper_fork::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_serve_toupper_fork-Debug-64e08d25501cf66aae7c.json",
+					"name" : "tcp_serve_toupper_fork",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/BOOK/Hands-On Network Programming with C/Chapter_03_An In-Depth Overview of TCP Connections/cmake-build-debug",
+		"source" : "D:/BOOK/Hands-On Network Programming with C/Chapter_03_An In-Depth Overview of TCP Connections"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

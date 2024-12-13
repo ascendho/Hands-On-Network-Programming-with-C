@@ -1,0 +1,4 @@
+D:/BOOK/Hands-On Network Programming with C/Chapter_05_Hostname Resolution and DNS/cmake-build-debug/CMakeFiles/lookup.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_05_Hostname Resolution and DNS/cmake-build-debug/CMakeFiles/dns_query.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_05_Hostname Resolution and DNS/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/BOOK/Hands-On Network Programming with C/Chapter_05_Hostname Resolution and DNS/cmake-build-debug/CMakeFiles/rebuild_cache.dir

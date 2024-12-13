@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chapter_05_Hostname_Resolution_and_DNS",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "dns_query::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dns_query-Debug-7c10873b1c459131198d.json",
+					"name" : "dns_query",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lookup::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lookup-Debug-c0504f3c3ea793115bcf.json",
+					"name" : "lookup",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/BOOK/Hands-On Network Programming with C/Chapter_05_Hostname Resolution and DNS/cmake-build-debug",
+		"source" : "D:/BOOK/Hands-On Network Programming with C/Chapter_05_Hostname Resolution and DNS"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
